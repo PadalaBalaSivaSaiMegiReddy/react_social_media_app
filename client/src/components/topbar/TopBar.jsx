@@ -13,12 +13,12 @@ function TopBar() {
         <div className="topbarCenter">
             <div className="searchbar">
                 <SearchIcon className='searchIcon'/>
-            <input placeholder="Search for posts,friends or videos" className="searchInput" />
+            <input placeholder="Search for posts, friends or videos" className="searchInput" />
             </div>
         </div>
         <div className="topbarRight">
             <div className="topbarLinks">
-                <span className="topbarLink">HomePage</span>
+                <span className="topbarLink">Homepage</span>
                 <span className="topbarLink">Timeline</span>
             </div>
             <div className="topbarIcons">
