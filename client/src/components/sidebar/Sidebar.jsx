@@ -8,6 +8,8 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import EventIcon from '@mui/icons-material/Event';
 import SchoolIcon from '@mui/icons-material/School';
+import {Users} from "../../dummyData"
+import CloseFriend from '../closeFriend/CloseFriend';
 
 function Sidebar() {
   return (
@@ -54,70 +56,9 @@ function Sidebar() {
         <button className='sidebarButton'>Show More</button>
         <hr className='sidebarHr'/>
         <ul className="sidebarFriendsList">
-          <li className="sidebarFriend">
-            <img className='sidebarFriendImg' src="../src/assets/person/2.jpeg" alt="" />
-            <span className='sidebarFriendName'>Jane Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className='sidebarFriendImg' src="../src/assets/person/2.jpeg" alt="" />
-            <span className='sidebarFriendName'>Jane Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className='sidebarFriendImg' src="../src/assets/person/2.jpeg" alt="" />
-            <span className='sidebarFriendName'>Jane Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className='sidebarFriendImg' src="../src/assets/person/2.jpeg" alt="" />
-            <span className='sidebarFriendName'>Jane Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className='sidebarFriendImg' src="../src/assets/person/2.jpeg" alt="" />
-            <span className='sidebarFriendName'>Jane Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className='sidebarFriendImg' src="../src/assets/person/2.jpeg" alt="" />
-            <span className='sidebarFriendName'>Jane Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className='sidebarFriendImg' src="../src/assets/person/2.jpeg" alt="" />
-            <span className='sidebarFriendName'>Jane Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className='sidebarFriendImg' src="../src/assets/person/2.jpeg" alt="" />
-            <span className='sidebarFriendName'>Jane Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className='sidebarFriendImg' src="../src/assets/person/2.jpeg" alt="" />
-            <span className='sidebarFriendName'>Jane Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className='sidebarFriendImg' src="../src/assets/person/2.jpeg" alt="" />
-            <span className='sidebarFriendName'>Jane Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className='sidebarFriendImg' src="../src/assets/person/2.jpeg" alt="" />
-            <span className='sidebarFriendName'>Jane Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className='sidebarFriendImg' src="../src/assets/person/2.jpeg" alt="" />
-            <span className='sidebarFriendName'>Jane Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className='sidebarFriendImg' src="../src/assets/person/2.jpeg" alt="" />
-            <span className='sidebarFriendName'>Jane Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className='sidebarFriendImg' src="../src/assets/person/2.jpeg" alt="" />
-            <span className='sidebarFriendName'>Jane Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className='sidebarFriendImg' src="../src/assets/person/2.jpeg" alt="" />
-            <span className='sidebarFriendName'>Jane Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className='sidebarFriendImg' src="../src/assets/person/2.jpeg" alt="" />
-            <span className='sidebarFriendName'>Jane Doe</span>
-          </li>
+          {
+            Users.map(user=><CloseFriend key={user.id} user={user}/>)
+          }
         </ul>
 
       </div>
