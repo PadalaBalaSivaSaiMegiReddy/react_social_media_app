@@ -1,4 +1,5 @@
 import './Rightbar.css'
+import {Users} from "../../dummyData"
 
 function Rightbar() {
   return (
@@ -18,48 +19,7 @@ function Rightbar() {
             </div>
             <span className="rightbarUsername">John Carter</span>
           </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src="../src/assets/person/3.jpeg" className='rightbarProfileImg' alt="" />
-              <span className='rightbarOnline'></span>
-            </div>
-            <span className="rightbarUsername">John Carter</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src="../src/assets/person/3.jpeg" className='rightbarProfileImg' alt="" />
-              <span className='rightbarOnline'></span>
-            </div>
-            <span className="rightbarUsername">John Carter</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src="../src/assets/person/3.jpeg" className='rightbarProfileImg' alt="" />
-              <span className='rightbarOnline'></span>
-            </div>
-            <span className="rightbarUsername">John Carter</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src="../src/assets/person/3.jpeg" className='rightbarProfileImg' alt="" />
-              <span className='rightbarOnline'></span>
-            </div>
-            <span className="rightbarUsername">John Carter</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src="../src/assets/person/3.jpeg" className='rightbarProfileImg' alt="" />
-              <span className='rightbarOnline'></span>
-            </div>
-            <span className="rightbarUsername">John Carter</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src="../src/assets/person/3.jpeg" className='rightbarProfileImg' alt="" />
-              <span className='rightbarOnline'></span>
-            </div>
-            <span className="rightbarUsername">John Carter</span>
-          </li>
+
         </ul>
 
       </div>
