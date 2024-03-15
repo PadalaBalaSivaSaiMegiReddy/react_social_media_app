@@ -3,12 +3,15 @@ import SearchIcon from '@mui/icons-material/Search';
 import PersonIcon from '@mui/icons-material/Person';
 import MessageIcon from '@mui/icons-material/Message';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import { Link } from 'react-router-dom';
 
 function TopBar() {
   return (
     <div className="topbarContainer">
         <div className="topbarLeft">
+            <Link to="/" style={{textDecoration:"none"}}>
             <span className="logo">MegiSocial</span>
+            </Link>
         </div>
         <div className="topbarCenter">
             <div className="searchbar">
