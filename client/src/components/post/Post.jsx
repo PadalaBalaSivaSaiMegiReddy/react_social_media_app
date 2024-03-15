@@ -15,6 +15,8 @@ function Post({post}) {
             setIsLiked(!isLiked);
     }
 
+    const PF = import.meta.env.VITE_PUBLIC_FOLDER;
+    console.log(PF);
     const fetchUser=async()=>{
             const response =  await axios.get(`http://localhost:8800/users/${post.userId}`);
             setUser(response.data); 
@@ -40,7 +42,7 @@ function Post({post}) {
             </div>
             <div className="postCenter">
                 <span className="postText">{post?.desc}</span>
-                <img className='postImg' src={post.img} alt="" />
+                <img className='postImg' src={post.img?"../src/assets/post/1.jpeg":""} alt="" />
             </div>
             <div className="postBottom">
                 <div className="postBottomLeft">
