@@ -31,7 +31,8 @@ function Post({post}) {
         <div className="postWrapper">
             <div className="postTop">
                 <div className="postTopLeft">
-                    <img className='postProfileImg' src={user.profilePicture} alt="ProfileImg" />
+                {/* user.profilePicture */}
+                    <img className='postProfileImg' src={PF+"person/1.jpeg"} alt="ProfileImg" />
                     <span className='postUserName'>{user.username}</span>
                     <span className='postDate'>{format(post.createdAt)}</span>
                 </div>
