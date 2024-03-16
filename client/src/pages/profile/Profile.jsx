@@ -5,6 +5,9 @@ import TopBar from "../../components/topbar/TopBar";
 import "./Profile.css";
 
 function Profile() {
+  const PF = import.meta.env.VITE_PUBLIC_FOLDER;
+  console.log(PF);
+
   return (
     <>
       <TopBar />
@@ -15,12 +18,12 @@ function Profile() {
             <div className="profileCover">
               <img
                 className="profileCoverImg"
-                src="../src/assets/post/3.jpeg"
+                src={`${PF}post/3.jpeg`}
                 alt=""
               />
               <img
                 className="profileUserImg"
-                src="../src/assets/person/7.jpeg"
+                src={`${PF}person/7.jpeg`}
                 alt=""
               />
             </div>
@@ -31,7 +34,7 @@ function Profile() {
           </div>
 
           <div className="profileRightBottom">
-            <Feed />
+            <Feed username="John" />
             <Rightbar profile />
           </div>
         </div>

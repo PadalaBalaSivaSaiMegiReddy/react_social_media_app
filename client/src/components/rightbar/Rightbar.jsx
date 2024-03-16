@@ -3,19 +3,19 @@ import { Users } from "../../dummyData";
 import Online from "../online/Online";
 
 const HomeRightbar = () => {
+  const PF = import.meta.env.VITE_PUBLIC_FOLDER;
   return (
     <>
       <div className="birthdayContainer">
         <img
           className="birthdayImg"
-          src="../src/assets/gift.png"
-          alt="birthdayImg"
+          src={`${PF}gift.png`}    alt="birthdayImg"
         />
         <span className="birthdayText">
           <b>Pola Foster</b> and <b>3 others</b> have their birthday today
         </span>
       </div>
-      <img className="rightbarAd" src="../src/assets/ad.png" alt="AdImg" />
+      <img className="rightbarAd" src={ `${PF}/ad.png` } alt="`dImg" />
       <h4 className="rightbarTitle">Online friends</h4>
       <ul className="rightbarFriendList">
         {Users.map((user) => (
@@ -27,6 +27,7 @@ const HomeRightbar = () => {
 };
 
 const ProfileRightbar = () => {
+  const PF = import.meta.env.VITE_PUBLIC_FOLDER;
   return (
     <>
       <h4 className="rightbarTitle">User information</h4>
@@ -48,7 +49,7 @@ const ProfileRightbar = () => {
       <div className="rightbarFollowings">
         <div className="rightbarFollowing">
           <img
-            src="../src/assets/person/1.jpeg"
+            src={ `${PF}person/1.jpeg`}
             alt=""
             className="rightbarFollowingImg"
           />
@@ -56,7 +57,7 @@ const ProfileRightbar = () => {
         </div>
         <div className="rightbarFollowing">
           <img
-            src="../src/assets/person/2.jpeg"
+            src={ `${PF}person/2.jpeg`}
             alt=""
             className="rightbarFollowingImg"
           />
@@ -64,7 +65,7 @@ const ProfileRightbar = () => {
         </div>
         <div className="rightbarFollowing">
           <img
-            src="../src/assets/person/3.jpeg"
+            src={ `${PF}person/3.jpeg`}
             alt=""
             className="rightbarFollowingImg"
           />
@@ -72,7 +73,7 @@ const ProfileRightbar = () => {
         </div>
         <div className="rightbarFollowing">
           <img
-            src="../src/assets/person/4.jpeg"
+            src={ `${PF}person/4.jpeg`}
             alt=""
             className="rightbarFollowingImg"
           />
@@ -80,7 +81,7 @@ const ProfileRightbar = () => {
         </div>
         <div className="rightbarFollowing">
           <img
-            src="../src/assets/person/5.jpeg"
+            src={ `${PF}person/5.jpeg`}
             alt=""
             className="rightbarFollowingImg"
           />
@@ -88,7 +89,7 @@ const ProfileRightbar = () => {
         </div>
         <div className="rightbarFollowing">
           <img
-            src="../src/assets/person/6.jpeg"
+            src={ `${PF}person/6.jpeg`}
             alt=""
             className="rightbarFollowingImg"
           />
@@ -100,6 +101,8 @@ const ProfileRightbar = () => {
 };
 
 function Rightbar({ profile }) {
+  const PF = import.meta.env.VITE_PUBLIC_FOLDER;
+
   return (
     <div className="rightbar">
       <div className="rightbarWrapper">
