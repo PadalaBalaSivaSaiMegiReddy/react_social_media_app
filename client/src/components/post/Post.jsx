@@ -19,12 +19,12 @@ function Post({post}) {
     const PF = import.meta.env.VITE_PUBLIC_FOLDER;
     
     const fetchUser=async()=>{
-            const response =  await axios.get(`http://localhost:8800/api/users/${post.userId}`);
+            const response =  await axios.get(`http://localhost:8800/api/users?userId=${post.userId}`);
+            console.log(post.userId);
             setUser(response.data); 
         }
         useEffect(()=>{
             fetchUser();
-    
         },[post.userId]);
 
   return (

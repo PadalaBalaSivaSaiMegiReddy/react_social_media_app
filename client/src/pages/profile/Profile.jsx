@@ -1,12 +1,32 @@
+import { useEffect, useState } from "react";
 import Feed from "../../components/feed/Feed";
 import Rightbar from "../../components/rightbar/Rightbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import TopBar from "../../components/topbar/TopBar";
 import "./Profile.css";
+import axios from "axios";
 
 function Profile() {
   const PF = import.meta.env.VITE_PUBLIC_FOLDER;
-  console.log(PF);
+
+  const [user,setUser]=useState({});
+
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const res = await axios.get(`http://localhost:8800/api/users?username=John`);
+        console.log(res);
+        setUser(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchUser();
+  }, []);
+
+
+ 
 
   return (
     <>
@@ -28,8 +48,8 @@ function Profile() {
               />
             </div>
             <div className="profileInfo">
-              <h4 className="profileInfoName">Megi Reddy</h4>
-              <span className="profileInfoDesc">Hello my friends!</span>
+              <h4 className="profileInfoName">{user.username}</h4>
+              <span className="profileInfoDesc">{user.desc}</span>
             </div>
           </div>
 
