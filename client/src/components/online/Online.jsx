@@ -2,9 +2,6 @@ import './Online.css'
 
 function Online({user}) {
   const PF = import.meta.env.VITE_PUBLIC_FOLDER;
-  console.log(PF)
-
-  console.log(PF+user.profilePicture);
 
   return (
     <li className="rightbarFriend">

@@ -20,7 +20,6 @@ function Post({post}) {
     
     const fetchUser=async()=>{
             const response =  await axios.get(`http://localhost:8800/api/users?userId=${post.userId}`);
-            console.log(post.userId);
             setUser(response.data); 
         }
         useEffect(()=>{
