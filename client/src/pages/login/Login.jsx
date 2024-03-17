@@ -1,6 +1,16 @@
+import { useRef } from 'react'
 import './Login.css'
 
 function Login() {
+
+    const email=useRef();
+    const password=useRef();
+
+    const handleClick=(event)=>{
+        event.preventDefault()
+    }
+
+   
   return (
     <div className='login'>
         <div className="loginWrapper">
@@ -10,15 +20,15 @@ function Login() {
                     Connect with your friends and the world around you with MegiSocial.
                 </span>
             </div>
-            <div className="loginRight">
-                <div className="loginBox">
-                    <input placeholder='Email' type="email" className="loginInput" />
-                    <input placeholder='Password' type="password" className="loginInput" />
+            <div className="loginRight" onSubmit={handleClick}>
+                <form className="loginBox">
+                    <input placeholder='Email' required ref={email} type="email" className="loginInput" />
+                    <input minLength={6} placeholder='Password' required ref={password} type="password" className="loginInput" />
                     <button className="loginButton">Log In</button>
                     <span className="loginForgot">Forgot Password?</span>
-                    <button className="loginRegisterButton">Create a New Account</button>
+                    <button type='button' className="loginRegisterButton">Create a New Account</button>
 
-                </div>
+                </form>
             </div>
         </div>
     </div>
