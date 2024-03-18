@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import "./Register.css";
 import axios from "axios";
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 
 
 
@@ -12,7 +12,7 @@ function Register() {
   const email = useRef();
   const password = useRef();
   const passwordAgain=useRef();
-  const history = useHistory();
+  // const history = useHistory();
 
 
 
@@ -28,8 +28,8 @@ function Register() {
             password:password.current.value,
         };
         try {
-            await axios.post("http://localhost:8800/api/auth/register",user)
-            history.push('/login'); // Redirect to login page
+            const res = await axios.post("http://localhost:8800/api/auth/register",user)
+            res.data&&window.location.replace("/login")
             
         } catch (error) {
             console.log(error);
