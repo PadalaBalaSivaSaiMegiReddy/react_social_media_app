@@ -46,7 +46,7 @@ function Login() {
               type="password"
               className="loginInput"
             />
-            <button className="loginButton" disabled={isFetching}>
+            <button type="submit" className="loginButton" disabled={isFetching}>
               {isFetching ? (
                 <Box
                   sx={{
