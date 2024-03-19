@@ -10,8 +10,6 @@ import {AuthContext} from "../../context/AuthContext"
 function TopBar() {
     const PF = import.meta.env.VITE_PUBLIC_FOLDER;
     const {user}=useContext(AuthContext)
-    console.log(user)
-    console.log(PF+user.profilePicture)
   return (
     <div className="topbarContainer">
         <div className="topbarLeft">
