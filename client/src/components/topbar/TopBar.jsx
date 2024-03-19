@@ -4,8 +4,12 @@ import PersonIcon from '@mui/icons-material/Person';
 import MessageIcon from '@mui/icons-material/Message';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import {AuthContext} from "../../context/AuthContext"
 
 function TopBar() {
+    const PF = import.meta.env.VITE_PUBLIC_FOLDER;
+    const {user}=useContext(AuthContext)
   return (
     <div className="topbarContainer">
         <div className="topbarLeft">
@@ -39,7 +43,7 @@ function TopBar() {
                     </div> 
 
                        </div>
-                       <img src="../src/assets/person/1.jpeg" alt="" className="topbarImg" />
+                       <img src={user.profilePicture?PF+user.profilePicture:PF+"person/noAvatar.png"} alt="" className="topbarImg" />
         </div>
     </div>
   )
