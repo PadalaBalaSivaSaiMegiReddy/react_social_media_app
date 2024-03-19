@@ -31,8 +31,6 @@ app.use(cors());
 app.use(express.json());
 app.use(helmet());
 app.use(morgan('common'))
-const upload = multer({ storage: storage });
-
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -42,6 +40,9 @@ const storage = multer.diskStorage({
       cb(null, req.body.name);
     },
   });
+const upload = multer({ storage: storage });
+
+
 
 
 app.post('http://localhost:8800/api/upload', upload.single('file'), function (req, res, next) {
