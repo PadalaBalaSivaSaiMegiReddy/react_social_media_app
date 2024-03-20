@@ -22,7 +22,9 @@ function Post({post}) {
     const likeHandler=()=>{
         try {
             axios.put("http://localhost:8800/api/posts/" + post._id + "/like", { userId: currentUser._id });
-          } catch (err) {}
+          } catch (err) {
+            console.log(err);
+          }
           setLike(isLiked ? like - 1 : like + 1);
           setIsLiked(!isLiked);
         };
@@ -45,7 +47,7 @@ function Post({post}) {
         <div className="postWrapper">
             <div className="postTop">
                 <div className="postTopLeft">
-                    <Link to={`profile/${user.username}`}>
+                    <Link to={`http://localhost:5173/profile/${user.username}`}>
                     
                     <img className='postProfileImg' src={user.profilePicture?PF+user.profilePicture:PF+"person/noAvatar.png"} alt="ProfileImg" />
                     </Link>

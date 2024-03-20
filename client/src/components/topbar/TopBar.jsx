@@ -43,7 +43,7 @@ function TopBar() {
                     </div> 
 
                        </div>
-                       <Link to={`profile/${user.username}`}>
+                       <Link to={`http://localhost:5173/profile/${user.username}`}>
                        <img src={user.profilePicture?PF+user.profilePicture:PF+"person/noAvatar.png"}alt="" className="topbarImg" />
                        </Link>
         </div>
