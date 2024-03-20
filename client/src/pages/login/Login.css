@@ -20,6 +20,8 @@
     justify-content: center;
 }
 
+
+
 .loginLogo{
     font-size: 50px;
     font-weight: 800;
@@ -85,7 +87,6 @@
 .loginRegisterButton{
     width: 60%;
     align-self: center;
-
     height: 50px;
     border-radius: 10px;
     border: none;

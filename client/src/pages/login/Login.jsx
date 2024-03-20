@@ -64,7 +64,7 @@ function Login() {
               )}
             </button>
             <span className="loginForgot">Forgot Password?</span>
-            <Link to="/register">
+            <Link  to="/register">
             <button type="button" className="loginRegisterButton">
 
             {isFetching ? (
