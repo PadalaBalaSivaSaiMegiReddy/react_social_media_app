@@ -31,12 +31,12 @@ export default function Rightbar({ user }) {
   const handleClick = async () => {
     try {
       if (followed) {
-        await axios.put(`/users/${user._id}/unfollow`, {
+        await axios.put(`http://localhost:8800/api/users/${user._id}/unfollow`, {
           userId: currentUser._id,
         });
         dispatch({ type: "UNFOLLOW", payload: user._id });
       } else {
-        await axios.put(`/users/${user._id}/follow`, {
+        await axios.put(`http://localhost:8800/api/users/${user._id}/follow`, {
           userId: currentUser._id,
         });
         dispatch({ type: "FOLLOW", payload: user._id });
@@ -47,7 +47,7 @@ export default function Rightbar({ user }) {
     }
   };
 
-  console.log(user)
+
 
   const HomeRightbar = () => {
     return (
@@ -93,7 +93,7 @@ export default function Rightbar({ user }) {
             <span className="rightbarInfoValue">
               {user.relationship === 1
                 ? "Single"
-                : user.relationship === 1
+                : user.relationship === 2
                 ? "Married"
                 : "-"}
             </span>
@@ -104,7 +104,7 @@ export default function Rightbar({ user }) {
           {friends.map((friend) => (
             <Link
               to={"/profile/" + friend.username}
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none" ,textAlign:"center"}}
             >
               <div className="rightbarFollowing">
                 <img
