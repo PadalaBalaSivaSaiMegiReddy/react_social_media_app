@@ -60,12 +60,12 @@ function Post({post}) {
             </div>
             <div className="postCenter">
                 <span className="postText">{post?.desc}</span>
-                <img className='postImg' src={PF+"post/1.jpeg"} alt="" />
+                <img className='postImg' src={PF + post.img} alt="" />
             </div>
             <div className="postBottom">
                 <div className="postBottomLeft">
-                    <img onClick={likeHandler} className='likeIcon' src={PF+"like.png"} alt="LikeIcon" />
-                    <img onClick={likeHandler} className='likeIcon' src={PF+"heart.png"}alt="HeartIcon" />
+                    <img onClick={likeHandler} className='likeIcon' src={`${PF}like.png`} alt="LikeIcon" />
+                    <img onClick={likeHandler} className='likeIcon' src={`${PF}heart.png`} alt="HeartIcon" />
                     <span className="postLikeCounter">{like} people like it</span>
                 </div>
                 <div className="postBottomRight">

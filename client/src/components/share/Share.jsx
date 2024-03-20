@@ -15,14 +15,26 @@ function Share() {
 
   const submitHandler= async (event)=>{
     event.preventDefault();
-    console.log("clicked");
-    const newPost={
-      userId:user._id,
-      desc: desc.current.value
-
+    const newPost = {
+      userId: user._id,
+      desc: desc.current.value,
+    };
+    if (file) {
+      const data = new FormData();
+      const fileName = Date.now() + file.name;
+      data.append("name", fileName);
+      data.append("file", file);
+      newPost.img = fileName;
+      console.log(newPost);
+      try {
+        await axios.post("http://localhost:8800/api/upload", data);
+      } catch (err) {
+        console.log(err)
+      }
     }
     try {
       await axios.post("http://localhost:8800/api/posts",newPost)
+      window.location.reload();
       
     } catch (error) {
       console.log(error)
