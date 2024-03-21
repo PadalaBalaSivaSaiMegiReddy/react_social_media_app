@@ -1,5 +1,6 @@
 import Conversation from '../../components/conversations/Conversation'
 import Conversations from '../../components/conversations/Conversation'
+import Message from '../../components/message/Message'
 import TopBar from '../../components/topbar/TopBar'
 import './Messenger.css'
 
@@ -22,7 +23,11 @@ function Messenger() {
         <div className="chatBox">
         <div className="chatBoxWrapper">
             <div className="chatBoxTop">
-
+              <Message/>
+              <Message/>
+              <Message/>
+              <Message/>
+              <Message/>
             </div>
             <div className="chatBoxBottom">
                 
